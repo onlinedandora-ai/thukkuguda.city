@@ -4,8 +4,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { DIRECTORY_LISTINGS, DirectoryListing } from '@/lib/data';
-import { Star, MapPin, Phone, CheckCircle2, ShieldCheck, ExternalLink, ArrowLeft, Building2, Share2 } from 'lucide-react';
+import { DIRECTORY_LISTINGS } from '@/lib/data';
+import { Star, MapPin, Phone, CheckCircle2, ShieldCheck, ExternalLink, ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 
 interface Props {

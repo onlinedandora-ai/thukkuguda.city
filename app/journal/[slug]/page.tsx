@@ -4,8 +4,8 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { JOURNAL_ARTICLES, JournalArticle } from '@/lib/data';
-import { Clock, User, ArrowLeft, ExternalLink, ShieldCheck, Tag, Building2, HelpCircle } from 'lucide-react';
+import { JOURNAL_ARTICLES } from '@/lib/data';
+import { Clock, User, ArrowLeft, ExternalLink, HelpCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 
 interface Props {

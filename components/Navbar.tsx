@@ -74,7 +74,7 @@ export default function Navbar() {
             </nav>
 
             {/* Right Action Icons & Buttons */}
-            <div className="flex items-center space-x-2.5">
+            <div className="flex items-center space-x-2">
               {/* Quick Search Button */}
               <button
                 onClick={() => setSearchOpen(true)}
@@ -85,17 +85,17 @@ export default function Navbar() {
                 <Search className="w-5 h-5" />
               </button>
 
-              {/* DARK MODE & LIGHT MODE TOGGLE BUTTON */}
+              {/* Dark / Light Mode Switch Button right next to search bar */}
               <button
                 onClick={toggleTheme}
                 aria-label="Toggle Dark and Light Mode"
                 title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
-                className="p-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition-all flex items-center justify-center group"
+                className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 rounded-lg transition-colors flex items-center justify-center"
               >
                 {theme === 'dark' ? (
-                  <Sun className="w-5 h-5 text-amber-400 group-hover:rotate-45 transition-transform duration-300" />
+                  <Sun className="w-5 h-5 text-amber-400" />
                 ) : (
-                  <Moon className="w-5 h-5 text-indigo-600 group-hover:-rotate-12 transition-transform duration-300" />
+                  <Moon className="w-5 h-5 text-indigo-600" />
                 )}
               </button>
 
@@ -142,7 +142,20 @@ export default function Navbar() {
                 <span>{link.name}</span>
               </Link>
             ))}
-            <div className="pt-2 flex items-center justify-between border-t border-slate-200 dark:border-slate-800">
+            <div className="pt-2 space-y-2 border-t border-slate-200 dark:border-slate-800">
+              <button
+                onClick={toggleTheme}
+                className="w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >
+                <span className="flex items-center space-x-3">
+                  {theme === 'dark' ? (
+                    <Sun className="w-5 h-5 text-amber-400" />
+                  ) : (
+                    <Moon className="w-5 h-5 text-indigo-600" />
+                  )}
+                  <span>{theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
+                </span>
+              </button>
               <Link
                 href="/news#submit"
                 onClick={() => setMobileMenuOpen(false)}

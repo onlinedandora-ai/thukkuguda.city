@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import { User, ShieldCheck, Building2, Key, CheckCircle2 } from 'lucide-react';
+import { CheckCircle2 } from 'lucide-react';
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');

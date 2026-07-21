@@ -6,7 +6,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { DIRECTORY_LISTINGS, JOURNAL_ARTICLES, COMMUNITY_POSTS } from '@/lib/data';
-import { Search, Building2, Newspaper, Radio, ArrowRight, Star, MapPin } from 'lucide-react';
+import { Search, Building2, Newspaper, Radio } from 'lucide-react';
 
 function SearchResultsContent() {
   const searchParams = useSearchParams();

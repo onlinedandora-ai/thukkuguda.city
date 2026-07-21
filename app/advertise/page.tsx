@@ -3,8 +3,7 @@
 import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Link from 'next/link';
-import { Megaphone, ShieldCheck, CheckCircle2, ExternalLink, Send, Star, Building2 } from 'lucide-react';
+import { Megaphone, CheckCircle2, ExternalLink, Send } from 'lucide-react';
 
 export default function AdvertisePage() {
   const [name, setName] = useState('');

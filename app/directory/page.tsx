@@ -5,8 +5,8 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
-import { DIRECTORY_LISTINGS, DirectoryListing } from '@/lib/data';
-import { Search, Filter, Star, MapPin, Phone, Building2, CheckCircle2, Map, Grid, PlusCircle } from 'lucide-react';
+import { DIRECTORY_LISTINGS } from '@/lib/data';
+import { Search, Star, MapPin, Building2, CheckCircle2, Map, Grid, PlusCircle } from 'lucide-react';
 
 const CATEGORIES = [
   { slug: 'all', label: 'All Categories' },

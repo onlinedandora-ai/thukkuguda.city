@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { COMMUNITY_POSTS } from '@/lib/data';
-import { MapPin, ThumbsUp, MessageSquare, ArrowLeft, ShieldAlert, CheckCircle2 } from 'lucide-react';
+import { MapPin, ThumbsUp, ArrowLeft, ShieldAlert } from 'lucide-react';
 import type { Metadata } from 'next';
 
 interface Props {

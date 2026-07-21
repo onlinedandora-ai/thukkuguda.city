@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Briefcase, Building2, MapPin, ArrowRight, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Building2, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export default function JobsModule() {
   return (

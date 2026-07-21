@@ -1,9 +1,6 @@
-import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ShieldCheck, MapPin, Building2, Radio, CheckCircle2, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Building2, CheckCircle2 } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -35,7 +32,7 @@ export default function AboutPage() {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full flex-1 space-y-8">
-        
+
         {/* Positioning Box */}
         <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
           <h2 className="text-2xl font-bold text-slate-900 dark:text-white">

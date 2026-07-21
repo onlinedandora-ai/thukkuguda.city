@@ -5,7 +5,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import { COMMUNITY_POSTS, CommunityPost } from '@/lib/data';
-import { Radio, ThumbsUp, MessageSquare, MapPin, PlusCircle, CheckCircle2, ShieldAlert, Send } from 'lucide-react';
+import { Radio, ThumbsUp, MessageSquare, MapPin, PlusCircle, Send } from 'lucide-react';
 
 export default function NewsFeedPage() {
   const [posts, setPosts] = useState<CommunityPost[]>(COMMUNITY_POSTS);

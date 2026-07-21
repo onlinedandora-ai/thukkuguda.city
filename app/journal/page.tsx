@@ -4,7 +4,7 @@ import Footer from '@/components/Footer';
 import Image from 'next/image';
 import Link from 'next/link';
 import { JOURNAL_ARTICLES } from '@/lib/data';
-import { Newspaper, Clock, User, ArrowRight, Tag } from 'lucide-react';
+import { Newspaper, Clock, User } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

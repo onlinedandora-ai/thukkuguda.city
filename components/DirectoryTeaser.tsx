@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { DIRECTORY_LISTINGS } from '@/lib/data';
-import { Star, MapPin, Building2, CheckCircle2, ArrowRight, Phone } from 'lucide-react';
+import { Star, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
 
 export default function DirectoryTeaser() {
   const featuredListings = DIRECTORY_LISTINGS.slice(0, 6);

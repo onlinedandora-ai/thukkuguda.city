@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { HIGHLIGHTS_DATA } from '@/lib/data';
-import { Sparkles, ArrowUpRight } from 'lucide-react';
+import { Compass, ArrowUpRight } from 'lucide-react';
 
 export default function HighlightsGrid() {
   return (
@@ -13,7 +13,7 @@ export default function HighlightsGrid() {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
           <div className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
-            <Sparkles className="w-4 h-4" />
+            <Compass className="w-4 h-4" />
             <span>Know Your Town</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">

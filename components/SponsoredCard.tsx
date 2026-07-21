@@ -1,9 +1,8 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink, Star, ShieldCheck, MapPin, Building } from 'lucide-react';
+import { ExternalLink, Star, ShieldCheck, MapPin } from 'lucide-react';
 
 export default function SponsoredCard() {
   return (
