@@ -6,7 +6,7 @@ import { ExternalLink, Star, ShieldCheck, MapPin } from 'lucide-react';
 
 export default function SponsoredCard() {
   return (
-    <div className="my-10 p-1 rounded-2xl bg-gradient-to-r from-amber-500 via-emerald-500 to-cyan-500 shadow-xl">
+    <div className="my-10 p-1 rounded-2xl bg-gradient-to-r from-amber-500 via-violet-500 to-fuchsia-500 shadow-xl">
       <div className="bg-white dark:bg-slate-900 rounded-[14px] p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
         
         {/* Left Info Column */}
@@ -16,7 +16,7 @@ export default function SponsoredCard() {
               Sponsored Placement
             </span>
             <span className="text-xs text-slate-500 dark:text-slate-400 flex items-center space-x-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
+              <ShieldCheck className="w-3.5 h-3.5 text-violet-500" />
               <span>Verified HMDA Layout</span>
             </span>
           </div>
@@ -35,7 +35,7 @@ export default function SponsoredCard() {
               <span>4.1 Stars (60 Reviews)</span>
             </div>
             <div className="flex items-center space-x-1">
-              <MapPin className="w-3.5 h-3.5 text-emerald-500" />
+              <MapPin className="w-3.5 h-3.5 text-violet-500" />
               <span>Near Exit 14, Srisailam Highway</span>
             </div>
           </div>
@@ -45,7 +45,7 @@ export default function SponsoredCard() {
         <div className="w-full md:w-auto shrink-0 flex flex-col space-y-3">
           <Link
             href="/directory/aspirealty-kingsdell"
-            className="w-full text-center px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow transition-all"
+            className="w-full text-center px-6 py-3 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm shadow transition-all"
           >
             View Project Details
           </Link>

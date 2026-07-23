@@ -32,17 +32,17 @@ export default function ContactPage() {
             <h2 className="text-xl font-bold text-slate-900 dark:text-white">Direct Contacts</h2>
             <div className="space-y-4 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
               <div className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-emerald-500 shrink-0" />
+                <Mail className="w-5 h-5 text-violet-500 shrink-0" />
                 <div>
                   <div className="font-bold text-slate-900 dark:text-white">General &amp; Editorial</div>
-                  <a href="mailto:thukkuguda@dandora.online" className="text-emerald-600 dark:text-emerald-400 hover:underline">
+                  <a href="mailto:thukkuguda@dandora.online" className="text-violet-600 dark:text-violet-400 hover:underline">
                     thukkuguda@dandora.online
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center space-x-3">
-                <Building2 className="w-5 h-5 text-emerald-500 shrink-0" />
+                <Building2 className="w-5 h-5 text-violet-500 shrink-0" />
                 <div>
                   <div className="font-bold text-slate-900 dark:text-white">Dandora Network HQ</div>
                   <span>Hyderabad, Telangana, India</span>
@@ -50,7 +50,7 @@ export default function ContactPage() {
               </div>
 
               <div className="flex items-center space-x-3">
-                <MapPin className="w-5 h-5 text-emerald-500 shrink-0" />
+                <MapPin className="w-5 h-5 text-violet-500 shrink-0" />
                 <div>
                   <div className="font-bold text-slate-900 dark:text-white">Coverage Footprint</div>
                   <span>Thukkuguda, ORR Exit 14, Adibatla SEZ, Maheshwaram Mandal</span>
@@ -62,7 +62,7 @@ export default function ContactPage() {
           <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
             <h2 className="text-xl font-bold text-slate-900 dark:text-white">Send Message</h2>
             {submitted ? (
-              <div className="p-4 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-200 text-xs font-semibold text-center">
+              <div className="p-4 rounded-xl bg-violet-100 dark:bg-violet-950 text-violet-900 dark:text-violet-200 text-xs font-semibold text-center">
                 Message sent successfully! We will get back to you shortly.
               </div>
             ) : (
@@ -79,7 +79,7 @@ export default function ContactPage() {
                   <label className="block font-bold text-slate-700 dark:text-slate-300 mb-1">Message</label>
                   <textarea required rows={3} className="w-full px-3 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800" />
                 </div>
-                <button type="submit" className="w-full py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold">
+                <button type="submit" className="w-full py-2.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-bold">
                   Send Message
                 </button>
               </form>

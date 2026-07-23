@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import Image from 'next/image';
 import Link from 'next/link';
 import { JOURNAL_ARTICLES } from '@/lib/data';
 import { Newspaper, Clock, User } from 'lucide-react';
@@ -21,7 +20,7 @@ export default function JournalPage() {
       <div className="bg-slate-900 text-white py-12 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-violet-950/80 border border-violet-800 text-violet-400 text-xs font-semibold uppercase tracking-wider">
               <Newspaper className="w-3.5 h-3.5" />
               <span>Hyperlocal Editorial Journal</span>
             </div>
@@ -45,18 +44,22 @@ export default function JournalPage() {
               className="group rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm card-hover-effect flex flex-col justify-between"
             >
               <div>
-                <div className="relative h-56 w-full overflow-hidden bg-slate-200 dark:bg-slate-800">
-                  <Image
-                    src={article.featuredImage}
-                    alt={article.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-3 left-3 bg-emerald-600 text-white text-[11px] font-bold px-2.5 py-1 rounded-full shadow">
-                    {article.category}
+                  {/* Editorial Graphic Header */}
+                  <div className="relative h-44 w-full bg-gradient-to-br from-violet-700 via-indigo-900 to-slate-950 p-6 flex flex-col justify-between overflow-hidden">
+                    <div className="flex items-center justify-between z-10">
+                      <span className="bg-violet-600 text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow">
+                        {article.category}
+                      </span>
+                      <span className="text-xs font-semibold text-violet-200">
+                        {article.readTime}
+                      </span>
+                    </div>
+                    <div className="z-10">
+                      <span className="text-[10px] font-extrabold text-violet-300 uppercase tracking-widest">
+                        Thukkuguda Journal
+                      </span>
+                    </div>
                   </div>
-                </div>
 
                 <div className="p-6 space-y-3">
                   <div className="flex items-center space-x-3 text-xs text-slate-500 dark:text-slate-400">
@@ -69,7 +72,7 @@ export default function JournalPage() {
                   </div>
 
                   <Link href={`/journal/${article.slug}`} className="block">
-                    <h2 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors leading-snug">
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors leading-snug">
                       {article.title}
                     </h2>
                   </Link>
@@ -82,13 +85,13 @@ export default function JournalPage() {
 
               <div className="p-6 pt-0 flex items-center justify-between border-t border-slate-100 dark:border-slate-800 mt-4 text-xs">
                 <div className="flex items-center space-x-1.5 text-slate-600 dark:text-slate-400">
-                  <User className="w-3.5 h-3.5 text-emerald-500" />
+                  <User className="w-3.5 h-3.5 text-violet-500" />
                   <span className="font-medium">{article.author.name}</span>
                 </div>
 
                 <Link
                   href={`/journal/${article.slug}`}
-                  className="font-bold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  className="font-bold text-violet-600 dark:text-violet-400 hover:underline"
                 >
                   Read Article &rarr;
                 </Link>

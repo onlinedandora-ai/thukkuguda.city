@@ -55,7 +55,7 @@ export default function NewsFeedPage() {
       <div className="bg-slate-900 text-white py-12 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-violet-950/80 border border-violet-800 text-violet-400 text-xs font-semibold uppercase tracking-wider">
               <Radio className="w-3.5 h-3.5" />
               <span>Unfiltered Community Feed</span>
             </div>
@@ -82,7 +82,7 @@ export default function NewsFeedPage() {
               </h2>
               <a
                 href="#submit"
-                className="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline flex items-center space-x-1"
+                className="text-xs font-bold text-violet-600 dark:text-violet-400 hover:underline flex items-center space-x-1"
               >
                 <PlusCircle className="w-4 h-4" />
                 <span>Submit Your Report</span>
@@ -97,12 +97,12 @@ export default function NewsFeedPage() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2 text-xs">
-                      <span className="font-bold px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-700 dark:text-emerald-400 border border-slate-200 dark:border-slate-700">
+                      <span className="font-bold px-2.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-violet-700 dark:text-violet-400 border border-slate-200 dark:border-slate-700">
                         {post.category}
                       </span>
                       <span className="text-slate-400">&bull;</span>
                       <span className="text-slate-500 dark:text-slate-400 flex items-center space-x-1">
-                        <MapPin className="w-3 h-3 text-emerald-500" />
+                        <MapPin className="w-3 h-3 text-violet-500" />
                         <span>{post.location}</span>
                       </span>
                     </div>
@@ -110,7 +110,7 @@ export default function NewsFeedPage() {
                     <span
                       className={`text-[11px] font-bold px-2 py-0.5 rounded border ${
                         post.status === 'Approved'
-                          ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800'
+                          ? 'bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300 border-violet-300 dark:border-violet-800'
                           : 'bg-amber-100 text-amber-900 dark:bg-amber-950 dark:text-amber-300 border-amber-300 dark:border-amber-800'
                       }`}
                     >
@@ -119,7 +119,7 @@ export default function NewsFeedPage() {
                   </div>
 
                   <Link href={`/news/${post.slug}`} className="block group">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors">
                       {post.title}
                     </h3>
                   </Link>
@@ -136,7 +136,7 @@ export default function NewsFeedPage() {
                     <div className="flex items-center space-x-3">
                       <button
                         onClick={() => handleUpvote(post.id)}
-                        className="flex items-center space-x-1 font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950 px-2 py-1 rounded transition-colors"
+                        className="flex items-center space-x-1 font-bold text-violet-600 dark:text-violet-400 hover:bg-violet-50 dark:hover:bg-violet-950 px-2 py-1 rounded transition-colors"
                       >
                         <ThumbsUp className="w-3.5 h-3.5" />
                         <span>{post.upvotes}</span>
@@ -163,7 +163,7 @@ export default function NewsFeedPage() {
               
               <div>
                 <h2 className="text-xl font-bold text-slate-900 dark:text-white flex items-center space-x-2">
-                  <PlusCircle className="w-5 h-5 text-emerald-500" />
+                  <PlusCircle className="w-5 h-5 text-violet-500" />
                   <span>Submit Local Report</span>
                 </h2>
                 <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
@@ -172,7 +172,7 @@ export default function NewsFeedPage() {
               </div>
 
               {submittedMessage && (
-                <div className="p-3 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-800 text-xs font-semibold">
+                <div className="p-3 rounded-xl bg-violet-100 dark:bg-violet-950 text-violet-900 dark:text-violet-200 border border-violet-300 dark:border-violet-800 text-xs font-semibold">
                   {submittedMessage}
                 </div>
               )}
@@ -188,7 +188,7 @@ export default function NewsFeedPage() {
                     placeholder="e.g. New water pipeline installation near Exit 14"
                     value={newTitle}
                     onChange={(e) => setNewTitle(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
@@ -202,7 +202,7 @@ export default function NewsFeedPage() {
                       placeholder="e.g. Resident Ward 3"
                       value={newAuthor}
                       onChange={(e) => setNewAuthor(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                     />
                   </div>
                   <div>
@@ -214,7 +214,7 @@ export default function NewsFeedPage() {
                       placeholder="e.g. Thukkuguda Village"
                       value={newLocation}
                       onChange={(e) => setNewLocation(e.target.value)}
-                      className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full px-3.5 py-2 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                     />
                   </div>
                 </div>
@@ -229,13 +229,13 @@ export default function NewsFeedPage() {
                     placeholder="Provide accurate details about what is happening..."
                     value={newContent}
                     onChange={(e) => setNewContent(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm flex items-center justify-center space-x-2 shadow transition-all"
+                  className="w-full py-3 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-bold text-sm flex items-center justify-center space-x-2 shadow transition-all"
                 >
                   <Send className="w-4 h-4" />
                   <span>Submit to Moderation Queue</span>

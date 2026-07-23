@@ -26,7 +26,7 @@ export default function AdvertisePage() {
       <div className="bg-slate-900 text-white py-12 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-violet-950/80 border border-violet-800 text-violet-400 text-xs font-semibold uppercase tracking-wider">
               <Megaphone className="w-3.5 h-3.5" />
               <span>Real Estate &amp; Business Advertising</span>
             </div>
@@ -69,15 +69,15 @@ export default function AdvertisePage() {
                 </div>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0" />
                     <span>Verified business badge</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0" />
                     <span>Google Maps embed</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0" />
                     <span>Direct phone &amp; address listing</span>
                   </li>
                 </ul>
@@ -93,12 +93,12 @@ export default function AdvertisePage() {
             </div>
 
             {/* Package 2 (Featured) */}
-            <div className="bg-gradient-to-b from-emerald-900 to-slate-900 text-white rounded-2xl p-6 border-2 border-emerald-500 shadow-xl space-y-6 flex flex-col justify-between relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-slate-950 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full shadow">
+            <div className="bg-gradient-to-b from-violet-950 to-slate-900 text-white rounded-2xl p-6 border-2 border-violet-500 shadow-xl space-y-6 flex flex-col justify-between relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-violet-500 text-white text-[10px] font-extrabold uppercase px-3 py-1 rounded-full shadow">
                 Most Popular for Developers
               </div>
               <div className="space-y-4 pt-2">
-                <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
+                <span className="text-xs font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-violet-950 text-violet-400 border border-violet-800">
                   Homepage Sponsored Card
                 </span>
                 <h3 className="text-xl font-bold text-white">
@@ -109,19 +109,19 @@ export default function AdvertisePage() {
                 </div>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-200">
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
                     <span>Prime homepage placement unit</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
                     <span>High-visibility gradient border</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
                     <span>Direct lead routing to sales team</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-amber-400 shrink-0" />
                     <span>Includes 1 Sponsored Journal post</span>
                   </li>
                 </ul>
@@ -130,7 +130,7 @@ export default function AdvertisePage() {
               <a
                 href="#inquire"
                 onClick={() => setPackageType('homepage-sponsored')}
-                className="w-full text-center py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold text-xs shadow-lg"
+                className="w-full text-center py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-extrabold text-xs shadow-lg"
               >
                 Select Package
               </a>
@@ -150,15 +150,15 @@ export default function AdvertisePage() {
                 </div>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0" />
                     <span>Cross-city placement (Keesara + Thukkuguda)</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0" />
                     <span>Dedicated video film &amp; project funnel</span>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0" />
                     <span>Managed lead-gen funnel on dandora.online</span>
                   </li>
                 </ul>
@@ -190,8 +190,8 @@ export default function AdvertisePage() {
           </div>
 
           {submitted ? (
-            <div className="p-6 rounded-xl bg-emerald-100 dark:bg-emerald-950 text-emerald-900 dark:text-emerald-200 border border-emerald-300 dark:border-emerald-800 text-center space-y-2">
-              <CheckCircle2 className="w-10 h-10 text-emerald-600 dark:text-emerald-400 mx-auto" />
+            <div className="p-6 rounded-xl bg-violet-100 dark:bg-violet-950 text-violet-900 dark:text-violet-200 border border-violet-300 dark:border-violet-800 text-center space-y-2">
+              <CheckCircle2 className="w-10 h-10 text-violet-600 dark:text-violet-400 mx-auto" />
               <h3 className="font-bold text-lg">Inquiry Received!</h3>
               <p className="text-xs">Thank you, {name}. Our sales manager will contact you at {phone || email} shortly.</p>
             </div>
@@ -206,7 +206,7 @@ export default function AdvertisePage() {
                     placeholder="e.g. Rajesh Reddy"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
                 <div>
@@ -217,7 +217,7 @@ export default function AdvertisePage() {
                     placeholder="e.g. Apex Infra Projects"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
               </div>
@@ -231,7 +231,7 @@ export default function AdvertisePage() {
                     placeholder="name@company.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
                 <div>
@@ -242,7 +242,7 @@ export default function AdvertisePage() {
                     placeholder="+91 98765 43210"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                   />
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function AdvertisePage() {
                 <select
                   value={packageType}
                   onChange={(e) => setPackageType(e.target.value)}
-                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                  className="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
                 >
                   <option value="directory-listing">Verified Directory Listing (&#8377;2,999/yr)</option>
                   <option value="homepage-sponsored">Homepage Sponsored Feature Card (&#8377;14,999/mo)</option>
@@ -262,7 +262,7 @@ export default function AdvertisePage() {
 
               <button
                 type="submit"
-                className="w-full py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm shadow transition-all flex items-center justify-center space-x-2"
+                className="w-full py-3.5 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-extrabold text-sm shadow transition-all flex items-center justify-center space-x-2"
               >
                 <Send className="w-4 h-4" />
                 <span>Submit Advertising Inquiry</span>

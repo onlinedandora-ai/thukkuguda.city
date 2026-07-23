@@ -1,16 +1,15 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { Briefcase, Building2, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Briefcase, Building2, ArrowRight, CheckCircle2, Radio } from 'lucide-react';
 
 export default function JobsModule() {
   return (
     <section id="jobs" className="py-16 bg-gradient-to-br from-slate-900 via-slate-950 to-slate-900 text-white relative overflow-hidden">
       
       {/* Background radial accent */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-500/10 blur-3xl rounded-full pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-violet-500/10 blur-3xl rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -19,7 +18,7 @@ export default function JobsModule() {
           {/* Text Left Column */}
           <div className="lg:col-span-6 space-y-6">
             
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-violet-950/80 border border-violet-800 text-violet-400 text-xs font-semibold uppercase tracking-wider">
               <Briefcase className="w-3.5 h-3.5" />
               <span>Jobs &amp; Industry Feature</span>
             </div>
@@ -35,7 +34,7 @@ export default function JobsModule() {
             {/* Key Highlights Bullet points */}
             <div className="space-y-3 pt-2">
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-violet-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sm text-white">Tata Advanced Systems Aerospace SEZ</h4>
                   <p className="text-xs text-slate-400">Manufactures Boeing, Sikorsky, and Lockheed Martin aerostructures on a 50+ acre campus.</p>
@@ -43,7 +42,7 @@ export default function JobsModule() {
               </div>
 
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-violet-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sm text-white">TCS Adibatla IT/ITES Hub</h4>
                   <p className="text-xs text-slate-400">1.8 Million sq ft campus accommodating thousands of tech engineers and cloud architects.</p>
@@ -51,7 +50,7 @@ export default function JobsModule() {
               </div>
 
               <div className="flex items-start space-x-3">
-                <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-5 h-5 text-violet-400 shrink-0 mt-0.5" />
                 <div>
                   <h4 className="font-bold text-sm text-white">High Demand for Housing &amp; PGs</h4>
                   <p className="text-xs text-slate-400">Drives active rental markets, executive PG accommodations, and villa plot purchases.</p>
@@ -63,7 +62,7 @@ export default function JobsModule() {
             <div className="flex flex-wrap gap-4 pt-4">
               <Link
                 href="/directory/aerospace-it-employers"
-                className="inline-flex items-center space-x-2 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-sm transition-all shadow-md"
+                className="inline-flex items-center space-x-2 px-5 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-bold text-sm transition-all shadow-md"
               >
                 <Building2 className="w-4 h-4" />
                 <span>Browse Aerospace &amp; IT Employers</span>
@@ -80,45 +79,39 @@ export default function JobsModule() {
 
           </div>
 
-          {/* Image Right Column with dual image preview */}
+          {/* Graphic Right Column with dual feature cards */}
           <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             
             <div className="space-y-4">
-              <div className="relative h-56 rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
-                <Image
-                  src="/images/sez-adibatla.jpg"
-                  alt="Tata Advanced Systems Aerospace SEZ"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-4 flex items-end">
-                  <span className="text-xs font-bold text-white">TASL Aerospace Hangar</span>
+              <div className="relative h-56 rounded-2xl overflow-hidden bg-gradient-to-br from-violet-700 via-indigo-900 to-slate-950 p-6 flex flex-col justify-between border border-slate-800 shadow-xl group">
+                <div className="p-3 rounded-xl bg-white/10 border border-white/20 w-fit text-white">
+                  <Building2 className="w-8 h-8" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[11px] font-extrabold text-violet-300 uppercase tracking-wide">National SEZ Node</span>
+                  <h4 className="text-sm font-bold text-white leading-snug">TASL Aerospace Hangar</h4>
                 </div>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-slate-300">
-                <div className="font-bold text-emerald-400 mb-1">Direct Exit 14 Access</div>
+                <div className="font-bold text-violet-400 mb-1">Direct Exit 14 Access</div>
                 8 minutes commute from Thukkuguda main road to SEZ entrance gates.
               </div>
             </div>
 
             <div className="space-y-4 pt-6">
-              <div className="relative h-56 rounded-2xl overflow-hidden border border-slate-800 shadow-xl group">
-                <Image
-                  src="/images/tcs-campus.jpg"
-                  alt="TCS Adibatla Campus"
-                  fill
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent p-4 flex items-end">
-                  <span className="text-xs font-bold text-white">TCS 1.8M Sq Ft Campus</span>
+              <div className="relative h-56 rounded-2xl overflow-hidden bg-gradient-to-br from-fuchsia-700 via-violet-900 to-slate-950 p-6 flex flex-col justify-between border border-slate-800 shadow-xl group">
+                <div className="p-3 rounded-xl bg-white/10 border border-white/20 w-fit text-white">
+                  <Radio className="w-8 h-8" />
+                </div>
+                <div className="space-y-1">
+                  <span className="text-[11px] font-extrabold text-fuchsia-300 uppercase tracking-wide">IT Enterprise Hub</span>
+                  <h4 className="text-sm font-bold text-white leading-snug">TCS 1.8M Sq Ft Campus</h4>
                 </div>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-800/80 border border-slate-700 text-xs text-slate-300">
-                <div className="font-bold text-cyan-400 mb-1">Executive PGs &amp; Shuttles</div>
+                <div className="font-bold text-fuchsia-400 mb-1">Executive PGs &amp; Shuttles</div>
                 Active daily shuttles and executive hostel developments.
               </div>
             </div>

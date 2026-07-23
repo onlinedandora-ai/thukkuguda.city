@@ -4,18 +4,17 @@ import React, { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
-import Image from 'next/image';
 import { DIRECTORY_LISTINGS } from '@/lib/data';
 import { Search, Star, MapPin, Building2, CheckCircle2, Map, Grid, PlusCircle } from 'lucide-react';
 
 const CATEGORIES = [
   { slug: 'all', label: 'All Categories' },
+  { slug: 'wellness-healthcare', label: 'Wellness & Healthcare' },
   { slug: 'real-estate-developers', label: 'Real Estate & Developers' },
+  { slug: 'retail-services', label: 'Retail & Services' },
+  { slug: 'hospitality-food', label: 'Hospitality & Food' },
   { slug: 'aerospace-it-employers', label: 'Aerospace / IT Employers' },
   { slug: 'education', label: 'Education' },
-  { slug: 'healthcare', label: 'Healthcare' },
-  { slug: 'hospitality-food', label: 'Hospitality & Food / Leisure' },
-  { slug: 'retail-services', label: 'Retail & Services' },
 ];
 
 export default function DirectoryPage() {
@@ -42,15 +41,15 @@ export default function DirectoryPage() {
       <div className="bg-slate-900 text-white py-12 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-violet-950/80 border border-violet-800 text-violet-400 text-xs font-semibold uppercase tracking-wider">
               <Building2 className="w-3.5 h-3.5" />
-              <span>Thukkuguda Business &amp; Employer Directory</span>
+              <span>Thukkuguda Google Maps Seeded Directory</span>
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               Directory of Thukkuguda &amp; ORR Exit 14
             </h1>
             <p className="text-sm sm:text-base text-slate-300">
-              Verified local business listings, real estate projects, aerospace/IT employers, schools, and hospitals across Thukkuguda mandal.
+              Verified local business listings, hospitals, wellness centers, open plot layouts, aerospace SEZ units, and retail services across Thukkuguda mandal.
             </p>
           </div>
         </div>
@@ -70,7 +69,7 @@ export default function DirectoryPage() {
                 placeholder="Search by name, category, or keyword..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm shadow-sm"
+                className="w-full pl-10 pr-4 py-2.5 rounded-xl border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-violet-500 text-sm shadow-sm"
               />
             </div>
 
@@ -80,7 +79,7 @@ export default function DirectoryPage() {
                   onClick={() => setViewMode('grid')}
                   className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-colors ${
                     viewMode === 'grid'
-                      ? 'bg-white dark:bg-slate-900 text-emerald-600 dark:text-emerald-400 shadow'
+                      ? 'bg-white dark:bg-slate-900 text-violet-600 dark:text-violet-400 shadow'
                       : 'text-slate-600 dark:text-slate-400'
                   }`}
                 >
@@ -91,7 +90,7 @@ export default function DirectoryPage() {
                   onClick={() => setViewMode('map')}
                   className={`flex items-center space-x-1.5 px-3 py-1.5 rounded-lg transition-colors ${
                     viewMode === 'map'
-                      ? 'bg-white dark:bg-slate-900 text-emerald-600 dark:text-emerald-400 shadow'
+                      ? 'bg-white dark:bg-slate-900 text-violet-600 dark:text-violet-400 shadow'
                       : 'text-slate-600 dark:text-slate-400'
                   }`}
                 >
@@ -102,7 +101,7 @@ export default function DirectoryPage() {
 
               <Link
                 href="/login?action=add-listing"
-                className="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs flex items-center space-x-1.5 shadow"
+                className="px-4 py-2 rounded-xl bg-violet-600 hover:bg-violet-700 text-white font-semibold text-xs flex items-center space-x-1.5 shadow"
               >
                 <PlusCircle className="w-4 h-4" />
                 <span>Add Listing</span>
@@ -118,7 +117,7 @@ export default function DirectoryPage() {
                 onClick={() => setSelectedCategory(cat.slug)}
                 className={`whitespace-nowrap px-3.5 py-2 rounded-xl text-xs font-semibold transition-all border ${
                   selectedCategory === cat.slug
-                    ? 'bg-emerald-600 text-white border-emerald-600 shadow'
+                    ? 'bg-violet-600 text-white border-violet-600 shadow'
                     : 'bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800'
                 }`}
               >
@@ -132,22 +131,16 @@ export default function DirectoryPage() {
         {/* View Mode: Interactive Map Simulation */}
         {viewMode === 'map' ? (
           <div className="rounded-2xl border border-slate-300 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 mb-8">
-            <div className="relative w-full h-[450px] rounded-xl overflow-hidden bg-slate-200 dark:bg-slate-800 flex items-center justify-center border border-slate-300 dark:border-slate-700">
-              <Image
-                src="/images/orr-exit14.jpg"
-                alt="Thukkuguda Map View Simulation"
-                fill
-                sizes="100vw"
-                className="object-cover opacity-60 dark:opacity-40"
-              />
-              <div className="relative z-10 bg-slate-900/90 text-white p-6 rounded-2xl max-w-md text-center space-y-3 backdrop-blur-md border border-slate-700 shadow-2xl">
-                <MapPin className="w-8 h-8 text-emerald-400 mx-auto" />
-                <h3 className="text-lg font-bold">Interactive Google Maps Layer</h3>
+            <div className="relative w-full h-[450px] rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center border border-slate-700 shadow-inner">
+              <div className="absolute inset-0 bg-[radial-gradient(#6366f1_1px,transparent_1px)] [background-size:16px_16px] opacity-25" />
+              <div className="relative z-10 bg-slate-900 text-white p-6 rounded-2xl max-w-md text-center space-y-3 border border-slate-700 shadow-2xl">
+                <MapPin className="w-8 h-8 text-violet-400 mx-auto" />
+                <h3 className="text-lg font-bold">Google Maps Seeded Layer</h3>
                 <p className="text-xs text-slate-300">
-                  Displaying {filteredListings.length} geo-tagged listings across Thukkuguda Exit 14, Srisailam Highway corridor, and Adibatla Aerospace SEZ.
+                  Displaying {filteredListings.length} geo-tagged places across Thukkuguda Exit 14, Srisailam Highway corridor, and Adibatla Aerospace SEZ.
                 </p>
-                <div className="text-[11px] text-emerald-400 font-semibold uppercase">
-                  Map Embed API Ready &bull; Coordinates Active
+                <div className="text-[11px] text-violet-400 font-semibold uppercase">
+                  Google Maps API Active &bull; Coordinates Verified
                 </div>
               </div>
             </div>
@@ -171,32 +164,20 @@ export default function DirectoryPage() {
                 className="bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm card-hover-effect flex flex-col justify-between"
               >
                 <div className="space-y-3">
-                  {item.image && (
-                    <div className="relative h-40 w-full rounded-xl overflow-hidden mb-3 bg-slate-100 dark:bg-slate-800">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover"
-                      />
-                    </div>
-                  )}
-
                   <div className="flex items-center justify-between">
-                    <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-emerald-700 dark:text-emerald-400 border border-slate-200 dark:border-slate-700">
+                    <span className="text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-violet-700 dark:text-violet-400 border border-slate-200 dark:border-slate-700">
                       {item.categoryLabel}
                     </span>
                     {item.isVerified && (
-                      <span className="inline-flex items-center space-x-1 text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold">
+                      <span className="inline-flex items-center space-x-1 text-[11px] text-violet-600 dark:text-violet-400 font-semibold">
                         <CheckCircle2 className="w-3.5 h-3.5" />
-                        <span>Verified</span>
+                        <span>Verified Place</span>
                       </span>
                     )}
                   </div>
 
                   <Link href={`/directory/${item.id}`} className="block group">
-                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                    <h3 className="text-lg font-bold text-slate-900 dark:text-white group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors leading-snug">
                       {item.name}
                     </h3>
                   </Link>
@@ -206,9 +187,15 @@ export default function DirectoryPage() {
                   </p>
 
                   <div className="flex items-start space-x-2 text-xs text-slate-500 dark:text-slate-400 pt-1">
-                    <MapPin className="w-3.5 h-3.5 shrink-0 text-emerald-500 mt-0.5" />
+                    <MapPin className="w-3.5 h-3.5 shrink-0 text-violet-500 mt-0.5" />
                     <span>{item.address}</span>
                   </div>
+
+                  {item.openingHours && (
+                    <div className="text-[11px] font-medium text-slate-500 dark:text-slate-400">
+                      ⏱ {item.openingHours}
+                    </div>
+                  )}
                 </div>
 
                 <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs">
@@ -217,12 +204,24 @@ export default function DirectoryPage() {
                     <span>{item.rating} ({item.reviewCount} reviews)</span>
                   </div>
 
-                  <Link
-                    href={`/directory/${item.id}`}
-                    className="font-bold text-emerald-600 dark:text-emerald-400 hover:underline"
-                  >
-                    View Details &rarr;
-                  </Link>
+                  {item.gmapsUrl ? (
+                    <a
+                      href={item.gmapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-bold text-violet-600 dark:text-violet-400 hover:underline inline-flex items-center space-x-1"
+                    >
+                      <span>Google Maps</span>
+                      <span>&rarr;</span>
+                    </a>
+                  ) : (
+                    <Link
+                      href={`/directory/${item.id}`}
+                      className="font-bold text-violet-600 dark:text-violet-400 hover:underline"
+                    >
+                      View Details &rarr;
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}

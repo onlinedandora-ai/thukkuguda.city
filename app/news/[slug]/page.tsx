@@ -41,7 +41,7 @@ export default async function NewsPostDetailPage({ params }: Props) {
         
         <Link
           href="/news"
-          className="inline-flex items-center space-x-1.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400 mb-6"
+          className="inline-flex items-center space-x-1.5 text-xs font-bold text-slate-600 dark:text-slate-400 hover:text-violet-600 dark:hover:text-violet-400 mb-6"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Back to Community News Feed</span>
@@ -50,10 +50,10 @@ export default async function NewsPostDetailPage({ params }: Props) {
         <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
           
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold px-3 py-1 rounded bg-slate-100 dark:bg-slate-800 text-emerald-700 dark:text-emerald-400 border border-slate-200 dark:border-slate-700">
+            <span className="text-xs font-bold px-3 py-1 rounded bg-slate-100 dark:bg-slate-800 text-violet-700 dark:text-violet-400 border border-slate-200 dark:border-slate-700">
               {post.category}
             </span>
-            <span className="text-xs font-semibold px-2.5 py-1 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
+            <span className="text-xs font-semibold px-2.5 py-1 rounded bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300 border border-violet-300 dark:border-violet-800">
               {post.status} Moderated
             </span>
           </div>
@@ -66,7 +66,7 @@ export default async function NewsPostDetailPage({ params }: Props) {
             <span>By <span className="font-semibold text-slate-800 dark:text-slate-200">{post.author}</span></span>
             <span>&bull;</span>
             <span className="flex items-center space-x-1">
-              <MapPin className="w-3.5 h-3.5 text-emerald-500" />
+              <MapPin className="w-3.5 h-3.5 text-violet-500" />
               <span>{post.location}</span>
             </span>
             <span>&bull;</span>
@@ -80,7 +80,7 @@ export default async function NewsPostDetailPage({ params }: Props) {
           {/* Comment Section & Report Abuse */}
           <div className="pt-6 border-t border-slate-100 dark:border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
             <div className="flex items-center space-x-3 font-semibold text-slate-600 dark:text-slate-400">
-              <span className="flex items-center space-x-1 text-emerald-600 dark:text-emerald-400">
+              <span className="flex items-center space-x-1 text-violet-600 dark:text-violet-400">
                 <ThumbsUp className="w-4 h-4" />
                 <span>{post.upvotes} Upvotes</span>
               </span>

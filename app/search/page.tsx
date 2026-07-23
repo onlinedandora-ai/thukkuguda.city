@@ -57,17 +57,17 @@ function SearchResultsContent() {
           {/* Directory Matches */}
           {matchingDirectory.length > 0 && (
             <div className="space-y-4">
-              <div className="flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 font-bold text-lg">
+              <div className="flex items-center space-x-2 text-violet-600 dark:text-violet-400 font-bold text-lg">
                 <Building2 className="w-5 h-5" />
                 <h2>Directory Listings ({matchingDirectory.length})</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {matchingDirectory.map((item) => (
                   <div key={item.id} className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
-                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300">
                       {item.categoryLabel}
                     </span>
-                    <Link href={`/directory/${item.id}`} className="block font-bold text-slate-900 dark:text-white hover:text-emerald-500">
+                    <Link href={`/directory/${item.id}`} className="block font-bold text-slate-900 dark:text-white hover:text-violet-500">
                       {item.name}
                     </Link>
                     <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">{item.description}</p>
@@ -80,17 +80,17 @@ function SearchResultsContent() {
           {/* Journal Matches */}
           {matchingJournal.length > 0 && (
             <div className="space-y-4">
-              <div className="flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 font-bold text-lg">
+              <div className="flex items-center space-x-2 text-violet-600 dark:text-violet-400 font-bold text-lg">
                 <Newspaper className="w-5 h-5" />
                 <h2>Journal Articles ({matchingJournal.length})</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {matchingJournal.map((art) => (
                   <div key={art.slug} className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
-                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">
+                    <span className="text-[10px] font-bold uppercase px-2 py-0.5 rounded bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300">
                       {art.category}
                     </span>
-                    <Link href={`/journal/${art.slug}`} className="block font-bold text-slate-900 dark:text-white hover:text-emerald-500">
+                    <Link href={`/journal/${art.slug}`} className="block font-bold text-slate-900 dark:text-white hover:text-violet-500">
                       {art.title}
                     </Link>
                     <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">{art.dek}</p>
@@ -103,14 +103,14 @@ function SearchResultsContent() {
           {/* News Matches */}
           {matchingPosts.length > 0 && (
             <div className="space-y-4">
-              <div className="flex items-center space-x-2 text-emerald-600 dark:text-emerald-400 font-bold text-lg">
+              <div className="flex items-center space-x-2 text-violet-600 dark:text-violet-400 font-bold text-lg">
                 <Radio className="w-5 h-5" />
                 <h2>Community Reports ({matchingPosts.length})</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {matchingPosts.map((post) => (
                   <div key={post.id} className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm space-y-2">
-                    <Link href={`/news/${post.slug}`} className="block font-bold text-slate-900 dark:text-white hover:text-emerald-500">
+                    <Link href={`/news/${post.slug}`} className="block font-bold text-slate-900 dark:text-white hover:text-violet-500">
                       {post.title}
                     </Link>
                     <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2">{post.content}</p>

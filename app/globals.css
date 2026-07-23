@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
     --bg-main: #f8fafc;
@@ -9,24 +11,24 @@
     --text-primary: #0f172a;
     --text-secondary: #475569;
     --text-muted: #64748b;
-    --accent-emerald: #059669;
-    --accent-cyan: #0284c7;
+    --accent-violet: #7c3aed;
+    --accent-fuchsia: #c026d3;
     --accent-amber: #d97706;
-    --nav-bg: rgba(255, 255, 255, 0.85);
+    --nav-bg: #ffffff;
   }
 
   html.dark {
     --bg-main: #090d16;
-    --bg-card: #111827;
-    --bg-card-hover: #1f2937;
-    --border-color: #1f2937;
+    --bg-card: #0f172a;
+    --bg-card-hover: #1e293b;
+    --border-color: #1e293b;
     --text-primary: #f8fafc;
     --text-secondary: #cbd5e1;
     --text-muted: #94a3b8;
-    --accent-emerald: #10b981;
-    --accent-cyan: #38bdf8;
+    --accent-violet: #a78bfa;
+    --accent-fuchsia: #e879f9;
     --accent-amber: #f59e0b;
-    --nav-bg: rgba(15, 23, 42, 0.85);
+    --nav-bg: #0f172a;
   }
 }
 
@@ -38,13 +40,13 @@ body {
 }
 
 .glass-panel {
-  background: var(--nav-bg);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: var(--nav-bg);
 }
 
-.gradient-text-emerald {
-  background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+.gradient-text-violet,
+.gradient-text-emerald,
+.gradient-text-indigo {
+  background: linear-gradient(135deg, #8b5cf6 0%, #d946ef 50%, #f59e0b 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -80,4 +82,13 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(148, 163, 184, 0.6);
+}
+
+/* Hide Next.js DevTools indicator button & overlay */
+[data-nextjs-toast],
+[data-nextjs-dialog-overlay],
+[data-nextjs-dialog],
+[data-nextjs-dev-overlay],
+nextjs-portal {
+  display: none !important;
 }

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useTheme } from './ThemeProvider';
-import { Sun, Moon, Search, PlusCircle, Menu, X, MapPin, Building2, Newspaper, Radio, HelpCircle, Megaphone, User } from 'lucide-react';
+import { Sun, Moon, Search, PlusCircle, Menu, X, Building2, Newspaper, Radio, User } from 'lucide-react';
 
 export default function Navbar() {
   const { theme, toggleTheme } = useTheme();
@@ -16,34 +16,28 @@ export default function Navbar() {
   const navLinks = [
     { name: 'Directory', href: '/directory', icon: Building2 },
     { name: 'Journal', href: '/journal', icon: Newspaper },
-    { name: 'Highlights', href: '/#highlights', icon: MapPin },
     { name: 'Jobs & SEZ', href: '/#jobs', icon: Radio },
     { name: 'Community News', href: '/news', icon: Radio },
-    { name: 'About', href: '/about', icon: HelpCircle },
-    { name: 'Advertise', href: '/advertise', icon: Megaphone },
   ];
 
   const isActive = (path: string) => pathname === path;
 
   return (
     <>
-      <header className="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 glass-panel transition-colors duration-300">
+      <header className="sticky top-0 z-50 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             
-            {/* Brand Logo & ORR Exit 14 Badge */}
+            {/* Brand Logo */}
             <div className="flex items-center space-x-3">
               <Link href="/" className="flex items-center space-x-2 group">
-                <div className="w-9 h-9 rounded-lg bg-emerald-600 dark:bg-emerald-500 flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+                <div className="w-9 h-9 rounded-lg bg-violet-600 dark:bg-violet-500 flex items-center justify-center text-white font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
                   T
                 </div>
                 <div className="flex flex-col">
                   <div className="flex items-center space-x-1.5">
                     <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">
-                      thukkuguda<span className="text-emerald-600 dark:text-emerald-400">.city</span>
-                    </span>
-                    <span className="text-[10px] uppercase font-semibold px-1.5 py-0.5 rounded bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800">
-                      Exit 14
+                      thukkuguda<span className="text-violet-600 dark:text-violet-400">.city</span>
                     </span>
                   </div>
                   <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">
@@ -61,10 +55,10 @@ export default function Navbar() {
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                    className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-colors ${
                       active
-                        ? 'bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-400'
-                        : 'text-slate-700 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800/60'
+                        ? 'bg-violet-600 text-white dark:bg-violet-600 dark:text-white shadow-sm'
+                        : 'text-slate-700 hover:text-slate-950 hover:bg-slate-100 dark:text-slate-200 dark:hover:text-white dark:hover:bg-slate-800'
                     }`}
                   >
                     {link.name}
@@ -85,24 +79,24 @@ export default function Navbar() {
                 <Search className="w-5 h-5" />
               </button>
 
-              {/* Dark / Light Mode Switch Button right next to search bar */}
+              {/* Sun & Moon Theme Toggle Button */}
               <button
                 onClick={toggleTheme}
-                aria-label="Toggle Dark and Light Mode"
+                aria-label="Toggle Light and Dark Theme"
                 title={`Switch to ${theme === 'dark' ? 'Light' : 'Dark'} Mode`}
                 className="p-2 text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-white dark:hover:bg-slate-800 rounded-lg transition-colors flex items-center justify-center"
               >
                 {theme === 'dark' ? (
-                  <Sun className="w-5 h-5 text-amber-400" />
+                  <Sun className="w-5 h-5 text-amber-400 hover:rotate-90 transition-transform duration-300" />
                 ) : (
-                  <Moon className="w-5 h-5 text-indigo-600" />
+                  <Moon className="w-5 h-5 text-violet-600 hover:-rotate-12 transition-transform duration-300" />
                 )}
               </button>
 
               {/* Submit Post CTA */}
               <Link
                 href="/news#submit"
-                className="hidden sm:flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow transition-transform active:scale-95"
+                className="hidden sm:flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg bg-violet-600 hover:bg-violet-700 text-white text-xs font-semibold shadow transition-transform active:scale-95"
               >
                 <PlusCircle className="w-4 h-4" />
                 <span>Post News</span>
@@ -138,7 +132,7 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center space-x-3 px-3 py-2 rounded-md text-base font-medium text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800"
               >
-                <link.icon className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+                <link.icon className="w-5 h-5 text-violet-600 dark:text-violet-400" />
                 <span>{link.name}</span>
               </Link>
             ))}
@@ -151,7 +145,7 @@ export default function Navbar() {
                   {theme === 'dark' ? (
                     <Sun className="w-5 h-5 text-amber-400" />
                   ) : (
-                    <Moon className="w-5 h-5 text-indigo-600" />
+                    <Moon className="w-5 h-5 text-violet-600" />
                   )}
                   <span>{theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</span>
                 </span>
@@ -159,7 +153,7 @@ export default function Navbar() {
               <Link
                 href="/news#submit"
                 onClick={() => setMobileMenuOpen(false)}
-                className="w-full flex items-center justify-center space-x-2 py-2 rounded-lg bg-emerald-600 text-white font-semibold text-sm"
+                className="w-full flex items-center justify-center space-x-2 py-2 rounded-lg bg-violet-600 text-white font-semibold text-sm"
               >
                 <PlusCircle className="w-4 h-4" />
                 <span>Post Local News</span>
@@ -201,7 +195,7 @@ export default function Navbar() {
                     key={chip}
                     href={`/search?q=${encodeURIComponent(chip)}`}
                     onClick={() => setSearchOpen(false)}
-                    className="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs hover:bg-emerald-100 dark:hover:bg-emerald-950/80 hover:text-emerald-700 dark:hover:text-emerald-400 transition-colors"
+                    className="px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs hover:bg-violet-100 dark:hover:bg-violet-950/80 hover:text-violet-700 dark:hover:text-violet-400 transition-colors"
                   >
                     {chip}
                   </Link>
@@ -213,7 +207,7 @@ export default function Navbar() {
                   <Link
                     href={`/search?q=${encodeURIComponent(searchQuery)}`}
                     onClick={() => setSearchOpen(false)}
-                    className="flex items-center justify-between p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-800 dark:text-emerald-300 text-sm font-medium hover:bg-emerald-100 dark:hover:bg-emerald-900/50"
+                    className="flex items-center justify-between p-2.5 rounded-lg bg-violet-50 dark:bg-violet-950/40 text-violet-800 dark:text-violet-300 text-sm font-medium hover:bg-violet-100 dark:hover:bg-violet-900/50"
                   >
                     <span>Search for &quot;{searchQuery}&quot; across directory & journal</span>
                     <span>&rarr;</span>

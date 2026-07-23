@@ -17,7 +17,7 @@ export default function AboutPage() {
       <div className="bg-slate-900 text-white py-12 border-b border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-800 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-violet-950/80 border border-violet-800 text-violet-400 text-xs font-semibold uppercase tracking-wider">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Independent Local Publishing</span>
             </div>
@@ -51,12 +51,12 @@ export default function AboutPage() {
 
         {/* The Dandora Network Context */}
         <div className="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
-          <div className="flex items-center space-x-3 text-emerald-600 dark:text-emerald-400 font-bold text-xl">
+          <div className="flex items-center space-x-3 text-violet-600 dark:text-violet-400 font-bold text-xl">
             <Building2 className="w-6 h-6" />
             <h2>Node of the Dandora Hyperlocal Network</h2>
           </div>
           <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-            <span className="font-bold text-slate-900 dark:text-white">Dandora (dandora.online)</span> operates a network of ORR hyperlocal city properties, including <span className="text-emerald-600 dark:text-emerald-400 font-semibold">keesara.city</span>, thukkuguda.city, and upcoming nodes along Shamirpet, Medchal, and Future City.
+            <span className="font-bold text-slate-900 dark:text-white">Dandora (dandora.online)</span> operates a network of ORR hyperlocal city properties, including <span className="text-violet-600 dark:text-violet-400 font-semibold">keesara.city</span>, thukkuguda.city, and upcoming nodes along Shamirpet, Medchal, and Future City.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
             <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700">
@@ -77,15 +77,15 @@ export default function AboutPage() {
           </h2>
           <ul className="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300">
             <li className="flex items-start space-x-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
               <span><strong className="text-slate-900 dark:text-white">Fact Attribution:</strong> All population figures, real-estate price projections, and job claims are explicitly attributed and dated.</span>
             </li>
             <li className="flex items-start space-x-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
               <span><strong className="text-slate-900 dark:text-white">HMDA / RERA Verification:</strong> Property listings clearly distinguish between verified layout permissions and speculative proposals.</span>
             </li>
             <li className="flex items-start space-x-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-4 h-4 text-violet-500 shrink-0 mt-0.5" />
               <span><strong className="text-slate-900 dark:text-white">Sponsored Content Disclosure:</strong> Commercial placements carry prominent &quot;Sponsored Placement&quot; labels.</span>
             </li>
           </ul>
